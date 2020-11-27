@@ -4,76 +4,100 @@ import java.util.Date;
 import java.util.List;
 
 public class Post {
-    private String id;
-    private String iconUrl;
-    private String authorText;
-    private String authorLink;
-    private Date postDate;
-    private boolean bookMarks;
-    private String description;
+    private int id;
+    private int ownerId;
+    private int fromId;
+    private int createdBy;
+    private int date;
+    private String text;
+    private int replyOwnerId;
+    private int replyPostId;
+    private boolean friendsOnly;
     private CommentsInfo commentsInfo;
-    private List<Attachment> attachmentList;
-    private Footer footer;
+    private LikesInfo likes;
+    private RepostsInfo reposts;
+    private String postType;
+    private PostSource postSource;
+    // private List<Attachment> attachmentList;
+    private GeoInfo geo;
+    private int signerId;
+    private boolean canPin;
+    private boolean canDelete;
+    private boolean canEdit;
+    private boolean isPinned;
+    private boolean markedAsAds;
+    private boolean isFavorite;
 
-    public void report(String reason){
-        //to do
-    }
-
-
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getIconUrl() {
-        return iconUrl;
+    public int getOwnerId() {
+        return ownerId;
     }
 
-    public void setIconUrl(String iconUrl) {
-        this.iconUrl = iconUrl;
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
     }
 
-    public String getAuthorText() {
-        return authorText;
+    public int getFromId() {
+        return fromId;
     }
 
-    public void setAuthorText(String authorText) {
-        this.authorText = authorText;
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
     }
 
-    public String getAuthorLink() {
-        return authorLink;
+    public int getCreatedBy() {
+        return createdBy;
     }
 
-    public void setAuthorLink(String authorLink) {
-        this.authorLink = authorLink;
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
     }
 
-    public Date getPostDate() {
-        return postDate;
+    public int getDate() {
+        return date;
     }
 
-    public void setPostDate(Date postDate) {
-        this.postDate = postDate;
+    public void setDate(int date) {
+        this.date = date;
     }
 
-    public boolean isBookMarks() {
-        return bookMarks;
+    public String getText() {
+        return text;
     }
 
-    public void setBookMarks(boolean bookMarks) {
-        this.bookMarks = bookMarks;
+    public void setText(String text) {
+        this.text = text;
     }
 
-    public String getDescription() {
-        return description;
+    public int getReplyOwnerId() {
+        return replyOwnerId;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setReplyOwnerId(int replyOwnerId) {
+        this.replyOwnerId = replyOwnerId;
+    }
+
+    public int getReplyPostId() {
+        return replyPostId;
+    }
+
+    public void setReplyPostId(int replyPostId) {
+        this.replyPostId = replyPostId;
+    }
+
+    public boolean isFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public void setFriendsOnly(boolean friendsOnly) {
+        this.friendsOnly = friendsOnly;
     }
 
     public CommentsInfo getCommentsInfo() {
@@ -84,19 +108,99 @@ public class Post {
         this.commentsInfo = commentsInfo;
     }
 
-    public List<Attachment> getAttachmentList() {
-        return attachmentList;
+    public LikesInfo getLikes() {
+        return likes;
     }
 
-    public void setAttachmentList(List<Attachment> attachmentList) {
-        this.attachmentList = attachmentList;
+    public void setLikes(LikesInfo likes) {
+        this.likes = likes;
     }
 
-    public Footer getFooter() {
-        return footer;
+    public RepostsInfo getReposts() {
+        return reposts;
     }
 
-    public void setFooter(Footer footer) {
-        this.footer = footer;
+    public void setReposts(RepostsInfo reposts) {
+        this.reposts = reposts;
+    }
+
+    public String getPostType() {
+        return postType;
+    }
+
+    public void setPostType(String postType) {
+        this.postType = postType;
+    }
+
+    public PostSource getPostSource() {
+        return postSource;
+    }
+
+    public void setPostSource(PostSource postSource) {
+        this.postSource = postSource;
+    }
+
+    public GeoInfo getGeo() {
+        return geo;
+    }
+
+    public void setGeo(GeoInfo geo) {
+        this.geo = geo;
+    }
+
+    public int getSignerId() {
+        return signerId;
+    }
+
+    public void setSignerId(int signerId) {
+        this.signerId = signerId;
+    }
+
+    public boolean isCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(boolean canPin) {
+        this.canPin = canPin;
+    }
+
+    public boolean isCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(boolean canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public boolean isCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(boolean canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    public boolean isPinned() {
+        return isPinned;
+    }
+
+    public void setPinned(boolean pinned) {
+        isPinned = pinned;
+    }
+
+    public boolean isMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(boolean markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
     }
 }

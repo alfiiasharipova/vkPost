@@ -3,6 +3,8 @@ package domain;
 public class CommentsInfo {
     private int count;
     private boolean canPost;
+    private boolean groupsCanPost;
+
 
     public int getCount() {
         return count;
@@ -18,5 +20,13 @@ public class CommentsInfo {
 
     public void setCanPost(boolean canPost) {
         this.canPost = canPost;
+    }
+
+    public boolean isGroupsCanPost() {
+        return groupsCanPost;
+    }
+
+    public void setGroupsCanPost(boolean groupsCanPost) {
+        this.groupsCanPost = groupsCanPost;
     }
 }
